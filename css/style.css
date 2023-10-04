@@ -1,0 +1,101 @@
+body {
+    display: grid;
+    grid-template-areas: "header header header"
+                         "nav nav nav"
+                         "section section aside"
+                         "footer footer footer";
+
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    height: 100vh;
+    font-family: sans-serif;  
+}
+
+header{
+    grid-area: header;
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+.i1{
+    grid-area: header;
+    height: 100px;
+    align-self: center;
+    padding: 5px;
+}
+
+.iconlink{
+    grid-area: header;
+    justify-self: end;
+    align-self: end;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+.i2{
+    height: 40px;
+}
+
+h1{
+    grid-area: header;
+    font-size: 35px;
+    align-self: center;
+    justify-self: left;
+    padding-left: 140px;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/*modificar apartir daq*/
+
+section {
+    grid-area: section;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    padding-bottom: 90px;
+    border-radius: 10px;
+}
+
+aside {
+    grid-area: aside;
+    background-color: #f9f9f9;
+    padding: 10px;
+    
+}
+
+footer {
+    grid-area: footer;
+    background-color: #ccc;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    border-top: 2px solid #696969;
+    
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
